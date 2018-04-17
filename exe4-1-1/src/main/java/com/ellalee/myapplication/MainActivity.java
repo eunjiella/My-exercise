@@ -1,13 +1,22 @@
 package com.ellalee.myapplication;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        String outName = data.getStringExtra("name");
+        Toast.makeText(getApplicationContext(),"전달받은 name의 속성 값:"+outName,Toast.LENGTH_LONG).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         Button button6 = findViewById(R.id.button6);
         Button button7 = findViewById(R.id.button7);
         Button button8 = findViewById(R.id.button8);
+        Button button9 = findViewById(R.id.button9);
+        Button button10 = findViewById(R.id.button10);
+        Button button11 = findViewById(R.id.button11);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +102,31 @@ public class MainActivity extends AppCompatActivity {
                 Intent myActivity2 = new Intent(Intent.ACTION_EDIT,Uri.parse(myData));
                 startActivity(myActivity2);
             }
+        });
+
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:01011111111"));
+                intent.putExtra("sms_body","are we going for shopping tonight?");
+                startActivity(intent);
+            }
+        });
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY,"foods you should eat");
+                startActivity(intent);
+            }
+        });
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
+                startActivityForResult(intent,1);
+            }
+
         });
 
 

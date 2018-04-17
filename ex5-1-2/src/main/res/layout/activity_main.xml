@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#886495ed"
+    android:orientation="vertical"
+    android:padding="2dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff00"
+        android:text="@string/ACME_Corp_Caption"
+        android:id="@+id/textView1"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/txtUserName"
+        android:hint="@string/Enter"
+        android:inputType="textCapWords|textAutoCorrect"
+        android:textSize="18sp">
+    <requestFocus/>
+    </EditText>
+
+    <Button
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1"
+        android:layout_marginTop="1dp"
+        android:text="@string/login"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        android:background="#f1594b"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkCream"
+        android:text="Cream"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkSugar"
+        android:text="Sugar"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:text="pay"
+        android:textStyle="bold"
+        android:id="@+id/btnPay"/>
+
+
+</LinearLayout>

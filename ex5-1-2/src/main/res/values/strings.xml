@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ex5-1-2</string>
+    <string name="ACME_Corp_Caption">Login with your name</string>
+    <string name="Enter">Enter your first and last name</string>
+    <string name="login">Login</string>
+    <string name="order">What else in your coffee?</string>
+
+</resources>
