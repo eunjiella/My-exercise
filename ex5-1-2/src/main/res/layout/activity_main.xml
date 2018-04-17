@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:padding="2dp"
+    android:orientation="vertical"
+    android:background="#886495ed"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:background="#ffffff00"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/textView1"
+        android:text="@string/ACME_Corp_Caption"
+        android:layout_marginTop="1dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtUserName"
+        android:layout_marginTop="1dp"
+        android:textSize="18sp"
+        android:inputType="textCapWords|textAutoCorrect"
+        android:hint="@string/Enter">
+
+    <requestFocus/>
+
+</EditText>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="82dp"
+        android:id="@+id/btn1"
+        android:text="@string/login"
+        android:layout_marginTop="1dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radGroupCoffeeType"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelCoffeeType"
+            android:background="#ff993300"
+            android:text="What type of coffee?"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radDecaf"
+            android:text="Decaf"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radEspresso"
+            android:text="Espresso"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radColombian"
+            android:text="Colombian"/>
+    </RadioGroup>
+
+    <TextView
+        android:background="#f1594b"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/order"/>
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/chkCream"
+        android:text="Cream"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/chkSugar"
+        android:text="Sugar"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:id="@+id/btnPay"
+        android:text="pay"
+        android:textStyle="bold"/>
+
+</LinearLayout>

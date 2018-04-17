@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:background="#FFFE00"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:text="This is fragment #2"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Get text in Fragment #1"
+        android:onClick="onclick"
+        android:id="@+id/btnGetText"/>
+
+</LinearLayout>

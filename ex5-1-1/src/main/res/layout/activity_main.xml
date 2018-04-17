@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/hello_there"/>
+
+    <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/myImgBtn1"/>
+
+    <ImageView
+        android:layout_height="300px"
+        android:layout_width="500px"
+        android:src="@drawable/ic_launcher_foreground"
+        android:id="@+id/myImgView1"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Click me"
+        android:id="@+id/myBtn1"
+        android:padding="15dp"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/ic_launcher_background"/>
+
+</LinearLayout>

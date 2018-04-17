@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:name="org.ellalee.ex5_2_2.Fragment1"
+        android:id="@+id/fragment1"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:name="org.ellalee.ex5_2_2.Fragment2"
+        android:id="@+id/fragment2"
+        android:layout_weight="1"/>
+
+</LinearLayout>
