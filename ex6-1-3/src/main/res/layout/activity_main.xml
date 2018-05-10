@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <TextView
+
+    <Imgabutton
+        android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
-<!--
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <bitmap android:src="@drawable/android_red"/>
-    </item>
-    <item android:top="10dp" android:left="10dp">
-        <bitmap android:src="@drawable/android_iron"/>
-    </item>
-    <item android:top="20dp" android:left="20dp">
-        <bitmap android:src-"@drawable/android_green"/>
-    </item>
-</layer-list>
--->
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_transition"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/layers"/>
+</RelativeLayout>

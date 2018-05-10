@@ -17,4 +17,17 @@
         android:text="Stop Service"
         android:id="@+id/btnStopService"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="send it to service"
+        android:id="@+id/btnSend"
+        android:onClick="onBtnSendClicked"/>
+
 </LinearLayout>
