@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             super(context);
         }
 
+
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
