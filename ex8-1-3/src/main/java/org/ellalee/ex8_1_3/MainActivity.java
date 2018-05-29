@@ -43,46 +43,58 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    class ConnectThread extends Thread{
+
+    class ConnectThread extends Thread {
         String urlStr;
-        public ConnectThread(String inStr){
+
+        public ConnectThread(String inStr) {
             urlStr = inStr;
         }
-        public void run(){
-            txtMsg.setText(output);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    private  String request(String urlStr){
-        StringBuilder output = new StringBuilder();
-        try {
-            URL url = new URL(urlStr);
-            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-            if(conn != null){
-                conn.setConnectTimeout(10000);
-                conn.setRequestMethod("GET");
-                conn.setDoInput(true);
-                conn.setDoOutput(true);
 
-                int resCode = conn.getResponseCode();
-
-                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String line = null;
-                while (true){
-                    line = reader.readLine();
-                    if(line == null){
-                        break;
+        public void run() {
+            try {
+                final String output = request(urlStr);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        txtMsg.setText(output);
                     }
-                    output.append(line + "\n");
-                }
-                reader.close();
-                conn.disconnect();
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        }catch (Exception e){
-            Log.e("SampleHTTP","Exception in processing response.",e);
-            e.printStackTrace();
         }
-        return output.toString();
+
+        private String request(String urlStr) {
+            StringBuilder output = new StringBuilder();
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                if (conn != null) {
+                    conn.setConnectTimeout(10000);
+                    conn.setRequestMethod("GET");
+                    conn.setDoInput(true);
+                    conn.setDoOutput(true);
+
+                    int resCode = conn.getResponseCode();
+
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    String line = null;
+                    while (true) {
+                        line = reader.readLine();
+                        if (line == null) {
+                            break;
+                        }
+                        output.append(line + "\n");
+                    }
+                    reader.close();
+                    conn.disconnect();
+                }
+            } catch (Exception e) {
+                Log.e("SampleHTTP", "Exception in processing response.", e);
+                e.printStackTrace();
+            }
+            return output.toString();
+        }
     }
 }
