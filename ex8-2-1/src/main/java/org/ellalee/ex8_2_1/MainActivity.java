@@ -1,7 +1,11 @@
 package org.ellalee.ex8_2_1;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void insert(String name,int age,String address){
-        db = helper.getWriteableDatabase();
-        contentValues values = new ContentValues();
+        db = helper.getWritableDatabase();
+        ContentValues values = new ContentValues();
 
         values.put("name",name);
         values.put("age",age);
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void update(String name,int age){
         db= helper.getWritableDatabase();
-        contentValues values = new ContentValues();
+        ContentValues values = new ContentValues();
         values.put("age",age);
         db.update("student",values,"name=?",new String[]{name});
     }
